@@ -1,4 +1,1 @@
-# portfolio
-My first GitHub repository 
-<br>
-Author- Krishnaa
+My portfolio created using React and designed using Figma
