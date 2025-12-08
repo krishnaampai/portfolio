@@ -1,1 +1,1 @@
-My portfolio created using React and designed using Figma
+My portfolio created using React and designed using Figma.

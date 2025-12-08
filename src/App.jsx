@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { FaGithub,FaLinkedin  } from "react-icons/fa";
-
+import SkillsGrid from './Components/SkillsGrid';
 import './App.css'
 
 function App() {
@@ -21,8 +21,12 @@ function App() {
       </div>
       </section>
       {/* Skills */}
-      <section className='bg-[#695073] h-7'>
-        
+      <section className='bg-[#695073] flex flex-col py-4 items-center'>
+        <button className='rounded-xl bg-white/50 text-black  text-sm px-2  mx-auto justify-center'>Skills</button>
+        <SkillsGrid/>
+      </section>
+      <section className='flex py-6'>
+         <button className='rounded-xl bg-white/50 text-black  text-sm px-2 mx-auto justify-center'>Projects</button>
       </section>
     </div>
     </>
