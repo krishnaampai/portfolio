@@ -1,34 +1,79 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { FaGithub,FaLinkedin  } from "react-icons/fa";
+import { FaGithub,FaLinkedin } from "react-icons/fa";
 import SkillsGrid from './Components/SkillsGrid';
+import ProjectsSection from './Components/ProjectsSection';
+import ExperienceSection from './Components/ExperienceSection';
+import EducationSection from './Components/EducationSection';
+import Navbar from './Components/Navbar';
 import './App.css'
+import {motion} from "framer-motion";
 
 function App() {
   return (
     <>
-    <div >
-      {/*Intro */}
-      <section className='px-36 py-10'>
-      <h1 className='text-[#E6DAE8] text-6xl font-bold'>Hi, I am Krishnaa 👋</h1>
-      <p className='text-[#E6DAE8] text-xl py-5 max-w-4xl'>
-        I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications for over 7 years, I still love it as if it was something new.
-      </p>
-      <div className='flex flex-col-1 gap-4'>
-        <FaGithub className='text-2xl text-white'/>
-        <FaLinkedin className=' text-2xl text-white'/>
+      <div className="relative ">
+
+        {/* Glow Blobs */}
+        <div className="fixed top-[-120px] left-[-120px] w-[320px] h-[320px] bg-[#A78BFA]/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div className="fixed bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-pink-400/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <Navbar/>
+
+        {/* Intro */}
+        <motion.section 
+          initial={{opacity:0,y:40}} 
+          animate={{opacity:1,y:0}} 
+          transition={{duration:0.8}} 
+          className='relative px-6 md:px-16 lg:px-32 py-20 min-h-[80vh] flex flex-col justify-center'
+        >
+
+          {/* Floating Cards */}
+          <div className="hidden lg:block absolute right-28 top-32 w-[260px] h-[160px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2rem] rotate-6"></div>
+
+          <div className="hidden lg:block absolute right-44 top-72 w-[220px] h-[140px] bg-[#A78BFA]/10 border border-[#A78BFA]/20 backdrop-blur-xl rounded-[2rem] -rotate-6"></div>
+
+          <div className="relative z-10">
+            <p className="text-[#A78BFA] text-sm tracking-[0.3em] uppercase mb-4">
+              Full Stack Developer
+            </p>
+
+            <h1 className='text-[#E2E8F0] text-5xl md:text-7xl font-bold leading-tight max-w-4xl'>
+              Hi, I am Krishnaa 👋
+            </h1>
+
+            <p className='text-gray-300 text-lg md:text-xl py-6 max-w-3xl leading-8'>
+              I build modern web experiences with React.js and Node.js focused on performance, accessibility and clean UI design.
+            </p>
+
+            <div className='flex gap-5'>
+              <a href="">
+                <FaGithub className='text-3xl text-[#E2E8F0] hover:text-[#A78BFA] transition duration-300'/>
+              </a>
+
+              <a href="">
+                <FaLinkedin className='text-3xl text-[#E2E8F0] hover:text-[#A78BFA] transition duration-300'/>
+              </a>
+            </div>
+          </div>
+
+        </motion.section>
+
+        {/* Skills */}
+        <section id='skills' className='bg-[#1E293B]/70 border-y border-white/10 backdrop-blur-xl flex flex-col py-6 items-center'>
+          <button className='rounded-xl bg-[#A78BFA]/20 border border-[#A78BFA]/30 text-[#E2E8F0] text-sm px-3 py-1 mx-auto backdrop-blur-md'>
+            Skills
+          </button>
+
+          <SkillsGrid/>
+        </section>
+
+        <div className="space-y-20 md:space-y-28">
+          <ProjectsSection/>
+          <ExperienceSection/>
+          <EducationSection/>
+        </div>
+
       </div>
-      </section>
-      {/* Skills */}
-      <section className='bg-[#695073] flex flex-col py-4 items-center'>
-        <button className='rounded-xl bg-white/50 text-black  text-sm px-2  mx-auto justify-center'>Skills</button>
-        <SkillsGrid/>
-      </section>
-      <section className='flex py-6'>
-         <button className='rounded-xl bg-white/50 text-black  text-sm px-2 mx-auto justify-center'>Projects</button>
-      </section>
-    </div>
     </>
   )
 }
