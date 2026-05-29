@@ -4,6 +4,7 @@ import ProjectsSection from './Components/ProjectsSection';
 import ExperienceSection from './Components/ExperienceSection';
 import EducationSection from './Components/EducationSection';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 import './App.css'
 import {motion} from "framer-motion";
 
@@ -20,7 +21,7 @@ function App() {
         <Navbar/>
 
         {/* Intro */}
-        <motion.section 
+        <motion.section id="home"
           initial={{opacity:0,y:40}} 
           animate={{opacity:1,y:0}} 
           transition={{duration:0.8}} 
@@ -42,15 +43,15 @@ function App() {
             </h1>
 
             <p className='text-gray-300 text-lg md:text-xl py-6 max-w-3xl leading-8'>
-              I build modern web experiences with React.js and Node.js focused on performance, accessibility and clean UI design.
+             Computer Science student at MEC passionate about building web applications, exploring AI/ML and solving real-world problems through technology.
             </p>
 
             <div className='flex gap-5'>
-              <a href="">
+              <a href="https://github.com/krishnaampai">
                 <FaGithub className='text-3xl text-[#E2E8F0] hover:text-[#A78BFA] transition duration-300'/>
               </a>
 
-              <a href="">
+              <a href="https://www.linkedin.com/in/krishnaa-m-pai/">
                 <FaLinkedin className='text-3xl text-[#E2E8F0] hover:text-[#A78BFA] transition duration-300'/>
               </a>
             </div>
@@ -71,6 +72,7 @@ function App() {
           <ProjectsSection/>
           <ExperienceSection/>
           <EducationSection/>
+          <Footer/>
         </div>
 
       </div>

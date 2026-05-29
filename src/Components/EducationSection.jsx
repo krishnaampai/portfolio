@@ -7,7 +7,7 @@ const EducationSection = () => {
         Education
       </button>
 
-      <div className="flex flex-col gap-8 px-6 md:px-12 lg:px-24 py-12 max-w-4xl mx-auto">
+      <div className="flex flex-col gap-6 px-4 md:px-10 lg:px-16 py-10 max-w-4xl mx-auto">
         {education.map((item,index)=>(
           <div key={index} className="bg-[#1E293B]/80 border border-white/10 rounded-[2rem] p-8 shadow-[0_10px_20px_rgba(0,0,0,0.25)] transition duration-300 hover:-translate-y-1 backdrop-blur-xl">
 
@@ -15,13 +15,16 @@ const EducationSection = () => {
               {item.year}
             </p>
 
-            <h2 className="text-3xl font-bold text-[#E2E8F0] mt-3">
+            <h2 className="text-xl font-bold text-[#E2E8F0] mt-1">
               {item.place}
             </h2>
 
-            <p className="text-gray-300 mt-4 text-lg">
+            <p className="text-gray-300 mt-2 text-lg">
               {item.degree}
             </p>
+            {/* <p className="text-gray-300 mt-2">
+              {item.score}
+            </p> */}
 
           </div>
         ))}

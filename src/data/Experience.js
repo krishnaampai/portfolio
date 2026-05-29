@@ -12,7 +12,7 @@ export const experience = [
   {
     date:"June 2025 - Present",
     org:"TLE MEC",
-    role:"Content Lead"
+    role:"Core Team"
   },
   {
     date:"July 2025 - Present",
