@@ -3,7 +3,7 @@ import SkillsGrid from './Components/SkillsGrid';
 import ProjectsSection from './Components/ProjectsSection';
 import ExperienceSection from './Components/ExperienceSection';
 import EducationSection from './Components/EducationSection';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/NavBar';
 import Footer from './Components/Footer';
 import './App.css'
 import {motion} from "framer-motion";
